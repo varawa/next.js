@@ -12,11 +12,14 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode;    //This is typescript defining what kind of data will children accept.
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <h2>Nav Items</h2>
+        {children}
+      </body>
     </html>
   );
 }
